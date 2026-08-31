@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+
+actor Reclutador
+actor Candidato
+actor Gerente
+
+rectangle "Sistema de Reclutamiento y Selección" {
+
+    usecase "Registrar Candidato" as UC1
+    usecase "Administrar Vacantes" as UC2
+    usecase "Programar Entrevista" as UC3
+    usecase "Registrar Evaluación" as UC4
+    usecase "Dar Seguimiento\nal Candidato" as UC5
+    usecase "Generar Reportes" as UC6
+    usecase "Consultar Estado\nPostulación" as UC7
+}
+
+Reclutador --> UC1
+Reclutador --> UC2
+Reclutador --> UC3
+Reclutador --> UC4
+Reclutador --> UC5
+Reclutador --> UC6
+
+Candidato --> UC7
+
+Gerente --> UC6
+
+@enduml
